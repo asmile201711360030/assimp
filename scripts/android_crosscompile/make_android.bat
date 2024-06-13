@@ -34,14 +34,7 @@ if exist %CMAKE_PATH% (
 )
 
 set ANDROID_NDK_PATH=""
-FOR /F "tokens=* USEBACKQ" %%F IN (`dir "%LocalAppData%\Android\Sdk\ndk" /b /o:n /a:d`) DO (
-  SET ANDROID_NDK_PATH="%LocalAppData%\Android\Sdk\ndk\%%F"
-)
-if exist %ANDROID_NDK_PATH% (
-  echo Found NDK at %ANDROID_NDK_PATH%
-) else (
-  set /p ANDROID_NDK_PATH="Enter ndk path: "
-)
+
 
 set BUILD_FOLDER=build
 rmdir /s /q %BUILD_FOLDER%
