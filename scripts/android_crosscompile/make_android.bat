@@ -3,7 +3,7 @@
 set ANDROID_PLATFORM=21
 set /p ANDROID_PLATFORM="Enter Android platform - Enter to use %ANDROID_PLATFORM%: "
 
-set ANDROID_ABI=armeabi-v7a
+set ANDROID_ABI=arm64-v8a
 set /p ANDROID_ABI="Enter Android ABI ( armeabi-v7a, arm64-v8a , x86 , x86_64 ) - Enter to use %ANDROID_ABI% : "
 
 set COMMON_CXX_FLAGS=-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++
@@ -26,15 +26,9 @@ if %ANDROID_ABI% == x86_64 (
   set C_FLAGS="%COMMON_C_FLAGS%"
 )
 
-set CMAKE_PATH="%ProgramFiles%\CMake\bin\cmake.exe"
-if exist %CMAKE_PATH% (
-    echo Found cmake at %CMAKE_PATH%
-) else (
-  set /p CMAKE_PATH="Enter cmake.exe path: "
-)
+set CMAKE_PATH="D:\Android\Sdk\cmake\3.22.1\bin\cmake.exe"
 
-set ANDROID_NDK_PATH=""
-
+set ANDROID_NDK_PATH="D:\Android\Sdk\ndk\21.4.7075529"
 
 set BUILD_FOLDER=build
 rmdir /s /q %BUILD_FOLDER%
