@@ -52,6 +52,10 @@ mkdir %BUILD_FOLDER%
 
 %CMAKE_PATH% --build ".\%BUILD_FOLDER%\"" -- -j 4"
 
+@echo off
+echo press anykey to continue... (XD)
+pause>nul
+
 set OUTPUT_FOLDER=.\output\
 mkdir %OUTPUT_FOLDER%
 mkdir "%OUTPUT_FOLDER%\lib\%ANDROID_ABI%"
