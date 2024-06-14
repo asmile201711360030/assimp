@@ -1,6 +1,6 @@
 @echo off
 
-set ANDROID_PLATFORM=23
+set ANDROID_PLATFORM=21
 set /p ANDROID_PLATFORM="Enter Android platform - Enter to use %ANDROID_PLATFORM%: "
 
 set ANDROID_ABI=arm64-v8a
@@ -28,7 +28,7 @@ if %ANDROID_ABI% == x86_64 (
 
 set CMAKE_PATH="D:\Android\Sdk\cmake\3.22.1\bin\cmake.exe"
 
-set ANDROID_NDK_PATH="D:\Android\Sdk\ndk\23.1.7779620"
+set ANDROID_NDK_PATH="D:\Android\Sdk\ndk\27.0.11718014"
 
 set BUILD_FOLDER=build
 rmdir /s /q %BUILD_FOLDER%
