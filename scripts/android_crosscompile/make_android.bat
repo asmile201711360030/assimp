@@ -1,6 +1,6 @@
 @echo off
 
-set ANDROID_PLATFORM=21
+set ANDROID_PLATFORM=24
 set /p ANDROID_PLATFORM="Enter Android platform - Enter to use %ANDROID_PLATFORM%: "
 
 set ANDROID_ABI=arm64-v8a
